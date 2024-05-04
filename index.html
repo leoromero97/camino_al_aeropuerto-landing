@@ -1,106 +1,151 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Camino al aeropuerto</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600;700;800&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600;700;800&family=Poppins&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-  <header>
-    <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank">+54 9 1136949011</a>
-    <div>
-      Logo
+  <header class="header">
+    <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank" class="header__cta">
+      +54 9 1136949011
+    </a>
+    <div class="header__container-logo">
+      <img src="" alt="Icono del Logo">
+      Agregar icono
     </div>
   </header>
   <main>
-    <section>
-      <h1>Traslados a Aeroparque & Ezeiza</h1>
-      <p>Contamos con +20 años de experiencia en traslados a los principales aeropuertos y destinos de Argentina. Reserva tu lugar.</p>
-      <a href="#precios">Precios y destinos</a>
+    <section class="hero">
+      <div class="hero__container">
+        <h1 class="hero__title">Traslados a <strong class="hero__title--strong">Aeroparque & Ezeiza</strong></h1>
+        <p class="hero__text">Contamos con +20 años de experiencia en traslados a los principales aeropuertos y destinos
+          de Argentina.
+          Reserva tu lugar.</p>
+        <a href="#precios" class="hero__cta">Precios & destinos</a>
+      </div>
     </section>
-    <section>
-      <h2>Destinos y precios</h2>
-      <div>
-        <img src="" alt="Icono">
-        <span>CABA - EZEIZA</span>
-        <div>
-          <small>Hasta 4 pasajeros</small>
-          <strong>$7.300</strong>
-          <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank">Reservar</a>
-        </div>
-      </div>
-      <div>
-        <img src="" alt="Icono">
-        <span>AEROPARQUE - EZEIZA</span>
-        <div>
-          <small>Hasta 4 pasajeros</small>
-          <strong>$7.500</strong>
-          <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank">Reservar</a>
-        </div>
-      </div>
-      <div>
-        <img src="" alt="Icono">
-        <span>RETIRO - EZEIZA</span>
-        <div>
-          <small>Hasta 4 pasajeros</small>
-          <strong>$7.500</strong>
-          <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank">Reservar</a>
-        </div>
-      </div>
-      <div>
-        <img src="" alt="Icono">
-        <span>CABA - AEROPARQUE</span>
-        <div>
-          <small>Hasta 4 pasajeros</small>
-          <strong>$4.300</strong>
-          <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank">Reservar</a>
-        </div>
-      </div>
-      <div>
-        <img src="" alt="Icono">
-        <span>AEROPARQUE - LA PLATA</span>
-        <div>
-          <small>Hasta 4 pasajeros</small>
-          <strong>$10.900</strong>
-          <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank">Reservar</a>
-        </div>
-      </div>
-      <div>
-        <img src="" alt="Icono">
-        <span>EZEIZA - LA PLATA</span>
-        <div>
-          <small>Hasta 4 pasajeros</small>
-          <strong>$15.900</strong>
-          <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank">Reservar</a>
-        </div>
-      </div>
-      <div>
-        <img src="" alt="Icono">
-        <span>CABA - EZEIZA EN VAN</span>
-        <div>
-          <small>Hasta 7 pasajeros</small>
-          <strong>$25.000</strong>
-          <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank">Reservar</a>
-        </div>
-      </div>
-      <div>
-        <img src="" alt="Icono">
-        <span>CABA - EZEIZA EN SPRINTER</span>
-        <div>
-          <small>Hasta 19 pasajeros</small>
-          <strong>$29.900</strong>
-          <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank">Reservar</a>
-        </div>
-      </div>
-      <div>
-        <img src="" alt="Icono">
-        <span>ROSARIO</span>
-        <div>
-          <strong>$45.000</strong>
-          <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank">Reservar</a>
+    <section class="pricing">
+      <div class="pricing__container">
+        <h2 class="pricing__title">Destinos & precios</h2>
+        <div class="pricing__cards-container">
+          <div class="pricing__card">
+            <img src="" alt="Icono" class="pricing__card--img">
+            <span class="pricing__card--title">CABA - EZEIZA</span>
+            <div class="pricing__card--footer">
+              <small class="pricing__card--footer-description">Hasta 4 pasajeros</small>
+              <strong class="pricing__card--footer-price">$7.300</strong>
+              <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank"
+                class="pricing__card--footer-cta">
+                Reservar
+              </a>
+            </div>
+          </div>
+          <div class="pricing__card">
+            <img src="" alt="Icono" class="pricing__card--img">
+            <span class="pricing__card--title">AEROPARQUE - EZEIZA</span>
+            <div class="pricing__card--footer">
+              <small class="pricing__card--footer-description">Hasta 4 pasajeros</small>
+              <strong class="pricing__card--footer-price">$7.500</strong>
+              <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank"
+                class="pricing__card--footer-cta">
+                Reservar
+              </a>
+            </div>
+          </div>
+          <div class="pricing__card">
+            <img src="" alt="Icono" class="pricing__card--img">
+            <span class="pricing__card--title">RETIRO - EZEIZA</span>
+            <div class="pricing__card--footer">
+              <small class="pricing__card--footer-description">Hasta 4 pasajeros</small>
+              <strong class="pricing__card--footer-price">$7.500</strong>
+              <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank"
+                class="pricing__card--footer-cta">
+                Reservar
+              </a>
+            </div>
+          </div>
+          <div class="pricing__card">
+            <img src="" alt="Icono" class="pricing__card--img">
+            <span class="pricing__card--title">CABA - AEROPARQUE</span>
+            <div class="pricing__card--footer">
+              <small class="pricing__card--footer-description">Hasta 4 pasajeros</small>
+              <strong class="pricing__card--footer-price">$4.300</strong>
+              <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank"
+                class="pricing__card--footer-cta">
+                Reservar
+              </a>
+            </div>
+          </div>
+          <div class="pricing__card">
+            <img src="" alt="Icono" class="pricing__card--img">
+            <span class="pricing__card--title">AEROPARQUE - LA PLATA</span>
+            <div class="pricing__card--footer">
+              <small class="pricing__card--footer-description">Hasta 4 pasajeros</small>
+              <strong class="pricing__card--footer-price">$10.900</strong>
+              <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank"
+                class="pricing__card--footer-cta">
+                Reservar
+              </a>
+            </div>
+          </div>
+          <div class="pricing__card">
+            <img src="" alt="Icono" class="pricing__card--img">
+            <span class="pricing__card--title">EZEIZA - LA PLATA</span>
+            <div class="pricing__card--footer">
+              <small class="pricing__card--footer-description">Hasta 4 pasajeros</small>
+              <strong class="pricing__card--footer-price">$15.900</strong>
+              <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank"
+                class="pricing__card--footer-cta">
+                Reservar
+              </a>
+            </div>
+          </div>
+          <div class="pricing__card">
+            <img src="" alt="Icono" class="pricing__card--img">
+            <span class="pricing__card--title">CABA - EZEIZA EN VAN</span>
+            <div class="pricing__card--footer">
+              <small class="pricing__card--footer-description">Hasta 7 pasajeros</small>
+              <strong class="pricing__card--footer-price">$25.000</strong>
+              <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank"
+                class="pricing__card--footer-cta">
+                Reservar
+              </a>
+            </div>
+          </div>
+          <div class="pricing__card">
+            <img src="" alt="Icono" class="pricing__card--img">
+            <span class="pricing__card--title">CABA - EZEIZA EN SPRINTER</span>
+            <div class="pricing__card--footer">
+              <small class="pricing__card--footer-description">Hasta 19 pasajeros</small>
+              <strong class="pricing__card--footer-price">$29.900</strong>
+              <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank"
+                class="pricing__card--footer-cta">
+                Reservar
+              </a>
+            </div>
+          </div>
+          <div class="pricing__card">
+            <img src="" alt="Icono" class="pricing__card--img">
+            <span class="pricing__card--title">ROSARIO</span>
+            <div class="pricing__card--footer">
+              <strong class="pricing__card--footer-price">$45.000</strong>
+              <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank"
+                class="pricing__card--footer-cta">
+                Reservar
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -148,4 +193,5 @@
     </form>
   </footer>
 </body>
+
 </html>
