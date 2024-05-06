@@ -137,6 +137,13 @@ body {
   justify-content: center;
 }
 
+.header__img {
+  width: 21.6rem;
+  background-color: #043B8A;
+  border-radius: 50%;
+  margin-bottom: -3rem;
+}
+
 /* Hero section */
 .hero {
   display: flex;
@@ -389,8 +396,8 @@ body {
   align-items: center;
   width: 100%;
   max-width: 144rem;
-  gap: 2rem;
-  padding: 2rem 1rem 4rem 1rem;
+  gap: 4rem;
+  padding: 3rem 1rem 4rem 1rem;
 }
 
 .navy__title {
@@ -401,8 +408,21 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  background-image: url(/assets//img-bg_navy.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding-top: 1.8rem;
 }
 
+.slider-nav {
+  visibility: visible;
+  opacity: 1;
+  filter: none;
+}
+
+.slider-nav::after {
+  display: none;
+}
 /* Values */
 
 .values {
@@ -420,8 +440,8 @@ body {
   align-items: center;
   width: 100%;
   max-width: 144rem;
-  gap: 2rem;
-  padding: 1rem 1rem 4rem 1rem;
+  gap: 4rem;
+  padding: 4rem 1rem;
 }
 
 .values__title {
@@ -432,6 +452,39 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  background-image: url(/assets//img-bg_values.png);
+  background-repeat: no-repeat;
+  padding-top: 1.8rem;
+}
+
+.values__carousel--icon {
+  height: 8.2rem;
+  width: 8.2rem;
+}
+
+.values__carousel--text {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  line-height: 1.4em;
+  color: #4E4E4E;
+  text-align: center;
+  font-weight: 700;
+}
+
+.slider-container li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.arrow-left {
+  left: 10%;
+}
+
+.slider-nav.slider-nav-next.arrow-right {
+  right: 10%;
 }
 
 /* Wpp button */
