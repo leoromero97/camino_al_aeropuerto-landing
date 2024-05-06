@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Camino al Aeropuerto</title>
+  <meta name="theme-color">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -12,8 +13,12 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
   <link rel="icon" href="/assets/logo-camino_al_aeropuerto.png" sizes="100x100">
+  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+    defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
@@ -166,13 +171,82 @@
     <section class="navy">
       <div class="navy__container">
         <h3 class="navy__title">La mejor flota del mercado</h3>
-        // Insertar carrusel con html css y javascript
+        <div class="swiffy-slider slider-nav-autoplay" data-slider-nav-autoplay-interval="4000">
+          <ul class="slider-container">
+            <li>
+              <img src="/assets/img-auto.jpg" alt="Imagen de auto grande" style="max-width: 24rem;height: auto;">
+            </li>
+            <li>
+              <img src="/assets/img-auto_grande.png" alt="Imagen de auto grande" style="max-width: 24rem;height: auto;">
+            </li>
+            <li>
+              <img src="/assets/img-pickup.jpg" alt="Imagen de pickup" style="max-width: 24rem;height: auto;">
+            </li>
+            <li>
+              <img src="/assets/img-pickup-grande.jpg" alt="Imagen de pickup grande"
+                style="max-width: 24rem;height: auto;">
+            </li>
+            <li>
+              <img src="/assets/img-camioneta.jpg" alt="Imagen de camioneta" style="max-width: 24rem;height: auto;">
+            </li>
+          </ul>
+          <button type="button" class="slider-nav">
+            <svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.5208 24.4131C14.9625 23.9687 15.2104 23.3676 15.2104 22.7411C15.2104 22.1146 14.9625 21.5135 14.5208 21.0692L6.12551 12.5553L14.5208 4.15996C14.9625 3.71562 15.2104 3.11454 15.2104 2.48801C15.2104 1.86148 14.9625 1.26041 14.5208 0.816066C14.3004 0.593783 14.0381 0.417352 13.7491 0.296952C13.4601 0.176551 13.1501 0.114563 12.837 0.114563C12.5239 0.114563 12.214 0.176551 11.925 0.296952C11.636 0.417352 11.3737 0.593783 11.1532 0.816066L1.09781 10.8715C0.875524 11.0919 0.699094 11.3542 0.578693 11.6432C0.458292 11.9322 0.396304 12.2422 0.396304 12.5553C0.396304 12.8683 0.458292 13.1783 0.578693 13.4673C0.699094 13.7563 0.875524 14.0186 1.09781 14.2391L11.1532 24.4131C11.3737 24.6353 11.636 24.8118 11.925 24.9322C12.214 25.0526 12.5239 25.1146 12.837 25.1146C13.1501 25.1146 13.4601 25.0526 13.7491 24.9322C14.0381 24.8118 14.3004 24.6353 14.5208 24.4131Z"
+                fill="#043C8C" />
+            </svg>
+          </button>
+          <button type="button" class="slider-nav slider-nav-next">
+            <svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1.08514 0.816069C0.643434 1.26041 0.395508 1.86148 0.395508 2.48802C0.395508 3.11455 0.643434 3.71562 1.08514 4.15996L9.48045 12.6739L1.08514 21.0692C0.643434 21.5135 0.395508 22.1146 0.395508 22.7411C0.395508 23.3676 0.643434 23.9687 1.08514 24.4131C1.30561 24.6353 1.5679 24.8118 1.8569 24.9322C2.14589 25.0526 2.45587 25.1146 2.76894 25.1146C3.08202 25.1146 3.39199 25.0526 3.68099 24.9322C3.96999 24.8118 4.23228 24.6353 4.45275 24.4131L14.5082 14.3577C14.7304 14.1372 14.9069 13.8749 15.0273 13.5859C15.1477 13.2969 15.2097 12.9869 15.2097 12.6739C15.2097 12.3608 15.1477 12.0508 15.0273 11.7618C14.9069 11.4728 14.7304 11.2105 14.5082 10.99L4.45275 0.816069C4.23228 0.593786 3.96999 0.417357 3.68099 0.296956C3.39199 0.176555 3.08202 0.114564 2.76894 0.114564C2.45587 0.114564 2.14589 0.176555 1.8569 0.296956C1.5679 0.417357 1.30561 0.593786 1.08514 0.816069Z"
+                fill="#043C8C" />
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
     <section class="values">
       <div class="values__container">
         <h3 class="values__title">¿Por qué elegirnos?</h3>
-        // Insertar carrusel con html css y javascript
+        <div class="navy__carousel--container">
+          <div class="swiffy-slider slider-nav-autoplay" data-slider-nav-autoplay-interval="5000">
+            <ul class="slider-container">
+              <li>
+                <img src="/assets/choferes.svg" alt="Icono de choferes calificados" class="values__carousel--icon">
+                <small class="values__carousel--text">Choferes calificados</small>
+              </li>
+              <li>
+                <img src="/assets//puntualidad.svg" alt="Icono de puntualidad" class="values__carousel--icon">
+                  <small class="values__carousel--text">Puntualidad</small>
+              </li>
+              <li>
+                <img src="/assets//seguridad-destino.svg" alt="Icono seguridad a destino" class="values__carousel--icon">
+                <small class="values__carousel--text">Seguridad a destino</small>
+              </li>
+              <li>
+                <img src="/assets/clientes-satisfechos.svg" alt="Icono clientes satisfechos" class="values__carousel--icon">
+                <small class="values__carousel--text">Clientes satisfechos</small>
+              </li>
+            </ul>
+
+            <button type="button" class="slider-nav arrow-left">
+              <svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.5208 24.4131C14.9625 23.9687 15.2104 23.3676 15.2104 22.7411C15.2104 22.1146 14.9625 21.5135 14.5208 21.0692L6.12551 12.5553L14.5208 4.15996C14.9625 3.71562 15.2104 3.11454 15.2104 2.48801C15.2104 1.86148 14.9625 1.26041 14.5208 0.816066C14.3004 0.593783 14.0381 0.417352 13.7491 0.296952C13.4601 0.176551 13.1501 0.114563 12.837 0.114563C12.5239 0.114563 12.214 0.176551 11.925 0.296952C11.636 0.417352 11.3737 0.593783 11.1532 0.816066L1.09781 10.8715C0.875524 11.0919 0.699094 11.3542 0.578693 11.6432C0.458292 11.9322 0.396304 12.2422 0.396304 12.5553C0.396304 12.8683 0.458292 13.1783 0.578693 13.4673C0.699094 13.7563 0.875524 14.0186 1.09781 14.2391L11.1532 24.4131C11.3737 24.6353 11.636 24.8118 11.925 24.9322C12.214 25.0526 12.5239 25.1146 12.837 25.1146C13.1501 25.1146 13.4601 25.0526 13.7491 24.9322C14.0381 24.8118 14.3004 24.6353 14.5208 24.4131Z"
+                  fill="#043C8C" />
+              </svg>
+            </button>
+            <button type="button" class="slider-nav slider-nav-next arrow-right">
+              <svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1.08514 0.816069C0.643434 1.26041 0.395508 1.86148 0.395508 2.48802C0.395508 3.11455 0.643434 3.71562 1.08514 4.15996L9.48045 12.6739L1.08514 21.0692C0.643434 21.5135 0.395508 22.1146 0.395508 22.7411C0.395508 23.3676 0.643434 23.9687 1.08514 24.4131C1.30561 24.6353 1.5679 24.8118 1.8569 24.9322C2.14589 25.0526 2.45587 25.1146 2.76894 25.1146C3.08202 25.1146 3.39199 25.0526 3.68099 24.9322C3.96999 24.8118 4.23228 24.6353 4.45275 24.4131L14.5082 14.3577C14.7304 14.1372 14.9069 13.8749 15.0273 13.5859C15.1477 13.2969 15.2097 12.9869 15.2097 12.6739C15.2097 12.3608 15.1477 12.0508 15.0273 11.7618C14.9069 11.4728 14.7304 11.2105 14.5082 10.99L4.45275 0.816069C4.23228 0.593786 3.96999 0.417357 3.68099 0.296956C3.39199 0.176555 3.08202 0.114564 2.76894 0.114564C2.45587 0.114564 2.14589 0.176555 1.8569 0.296956C1.5679 0.417357 1.30561 0.593786 1.08514 0.816069Z"
+                  fill="#043C8C" />
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
     <div class="wpp-button__container">
@@ -232,6 +306,7 @@
       </form>
     </div>
   </footer>
+  <script src="./main.js"></script>
 </body>
 
 </html>
