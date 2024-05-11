@@ -24,6 +24,12 @@
 <body>
   <header class="header">
     <a href="https://api.whatsapp.com/send?phone=5491136949011" target="_blank" class="header__cta">
+      <svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+        class="header__cta--icon">
+        <path
+          d="M18.4702 15.9199L17.8123 16.5739C17.8123 16.5739 16.2485 18.1289 11.9802 13.8847C7.71188 9.64062 9.27561 8.08576 9.27561 8.08576L9.68987 7.67382C10.7105 6.65904 10.8067 5.02981 9.91622 3.84041L8.09486 1.40739C6.99278 -0.0647275 4.86321 -0.259193 3.60003 0.996808L1.33283 3.25114C0.706492 3.87392 0.286766 4.68124 0.337668 5.57682C0.467884 7.86801 1.50452 12.7977 7.28901 18.5493C13.4232 24.6487 19.1789 24.891 21.5326 24.6716C22.277 24.6023 22.9244 24.2231 23.4462 23.7043L25.4981 21.6641C26.8832 20.2869 26.4926 17.9258 24.7205 16.9625L21.9609 15.4623C20.7972 14.8298 19.3796 15.0155 18.4702 15.9199Z"
+          fill="currentColor" />
+      </svg>
       +54 9 1136949011
     </a>
     <div class="header__container-logo">
@@ -42,7 +48,7 @@
     </section>
     <section class="pricing">
       <div class="pricing__container">
-        <h2 class="pricing__title">Destinos & precios</h2>
+        <h2 class="pricing__title" id="precios">Destinos & precios</h2>
         <div class="pricing__cards-container">
           <div class="pricing__card">
             <img src="/assets/logo-camino_al_aeropuerto.png" alt="Logo Camino al Aeropuerto" class="pricing__card--img">
@@ -205,48 +211,83 @@
             </svg>
           </button>
         </div>
+        <ul class="navy__content">
+          <li>
+            <img src="/assets/img-auto.jpg" alt="Imagen de auto grande" style="max-width: 24rem;height: auto;">
+          </li>
+          <li>
+            <img src="/assets/img-auto_grande.png" alt="Imagen de auto grande" style="max-width: 24rem;height: auto;">
+          </li>
+          <li>
+            <img src="/assets/img-pickup.jpg" alt="Imagen de pickup" style="max-width: 24rem;height: auto;">
+          </li>
+          <li>
+            <img src="/assets/img-pickup-grande.jpg" alt="Imagen de pickup grande"
+              style="max-width: 24rem;height: auto;">
+          </li>
+          <li>
+            <img src="/assets/img-camioneta.jpg" alt="Imagen de camioneta" style="max-width: 24rem;height: auto;">
+          </li>
+        </ul>
       </div>
     </section>
     <section class="values">
       <div class="values__container">
         <h3 class="values__title">¿Por qué elegirnos?</h3>
-        <div class="navy__carousel--container">
-          <div class="swiffy-slider slider-nav-autoplay" data-slider-nav-autoplay-interval="5000">
-            <ul class="slider-container">
-              <li>
-                <img src="/assets/choferes.svg" alt="Icono de choferes calificados" class="values__carousel--icon">
-                <small class="values__carousel--text">Choferes calificados</small>
-              </li>
-              <li>
-                <img src="/assets//puntualidad.svg" alt="Icono de puntualidad" class="values__carousel--icon">
-                  <small class="values__carousel--text">Puntualidad</small>
-              </li>
-              <li>
-                <img src="/assets//seguridad-destino.svg" alt="Icono seguridad a destino" class="values__carousel--icon">
-                <small class="values__carousel--text">Seguridad a destino</small>
-              </li>
-              <li>
-                <img src="/assets/clientes-satisfechos.svg" alt="Icono clientes satisfechos" class="values__carousel--icon">
-                <small class="values__carousel--text">Clientes satisfechos</small>
-              </li>
-            </ul>
+        <div class="swiffy-slider slider-nav-autoplay" data-slider-nav-autoplay-interval="5000">
+          <ul class="slider-container">
+            <li>
+              <img src="/assets/choferes.svg" alt="Icono de choferes calificados" class="values__carousel--icon">
+              <small class="values__carousel--text">Choferes calificados</small>
+            </li>
+            <li>
+              <img src="/assets//puntualidad.svg" alt="Icono de puntualidad" class="values__carousel--icon">
+              <small class="values__carousel--text">Puntualidad</small>
+            </li>
+            <li>
+              <img src="/assets//seguridad-destino.svg" alt="Icono seguridad a destino" class="values__carousel--icon">
+              <small class="values__carousel--text">Seguridad a destino</small>
+            </li>
+            <li>
+              <img src="/assets/clientes-satisfechos.svg" alt="Icono clientes satisfechos"
+                class="values__carousel--icon">
+              <small class="values__carousel--text">Clientes satisfechos</small>
+            </li>
+          </ul>
 
-            <button type="button" class="slider-nav arrow-left">
-              <svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M14.5208 24.4131C14.9625 23.9687 15.2104 23.3676 15.2104 22.7411C15.2104 22.1146 14.9625 21.5135 14.5208 21.0692L6.12551 12.5553L14.5208 4.15996C14.9625 3.71562 15.2104 3.11454 15.2104 2.48801C15.2104 1.86148 14.9625 1.26041 14.5208 0.816066C14.3004 0.593783 14.0381 0.417352 13.7491 0.296952C13.4601 0.176551 13.1501 0.114563 12.837 0.114563C12.5239 0.114563 12.214 0.176551 11.925 0.296952C11.636 0.417352 11.3737 0.593783 11.1532 0.816066L1.09781 10.8715C0.875524 11.0919 0.699094 11.3542 0.578693 11.6432C0.458292 11.9322 0.396304 12.2422 0.396304 12.5553C0.396304 12.8683 0.458292 13.1783 0.578693 13.4673C0.699094 13.7563 0.875524 14.0186 1.09781 14.2391L11.1532 24.4131C11.3737 24.6353 11.636 24.8118 11.925 24.9322C12.214 25.0526 12.5239 25.1146 12.837 25.1146C13.1501 25.1146 13.4601 25.0526 13.7491 24.9322C14.0381 24.8118 14.3004 24.6353 14.5208 24.4131Z"
-                  fill="#043C8C" />
-              </svg>
-            </button>
-            <button type="button" class="slider-nav slider-nav-next arrow-right">
-              <svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M1.08514 0.816069C0.643434 1.26041 0.395508 1.86148 0.395508 2.48802C0.395508 3.11455 0.643434 3.71562 1.08514 4.15996L9.48045 12.6739L1.08514 21.0692C0.643434 21.5135 0.395508 22.1146 0.395508 22.7411C0.395508 23.3676 0.643434 23.9687 1.08514 24.4131C1.30561 24.6353 1.5679 24.8118 1.8569 24.9322C2.14589 25.0526 2.45587 25.1146 2.76894 25.1146C3.08202 25.1146 3.39199 25.0526 3.68099 24.9322C3.96999 24.8118 4.23228 24.6353 4.45275 24.4131L14.5082 14.3577C14.7304 14.1372 14.9069 13.8749 15.0273 13.5859C15.1477 13.2969 15.2097 12.9869 15.2097 12.6739C15.2097 12.3608 15.1477 12.0508 15.0273 11.7618C14.9069 11.4728 14.7304 11.2105 14.5082 10.99L4.45275 0.816069C4.23228 0.593786 3.96999 0.417357 3.68099 0.296956C3.39199 0.176555 3.08202 0.114564 2.76894 0.114564C2.45587 0.114564 2.14589 0.176555 1.8569 0.296956C1.5679 0.417357 1.30561 0.593786 1.08514 0.816069Z"
-                  fill="#043C8C" />
-              </svg>
-            </button>
-          </div>
+          <button type="button" class="slider-nav arrow-left">
+            <svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.5208 24.4131C14.9625 23.9687 15.2104 23.3676 15.2104 22.7411C15.2104 22.1146 14.9625 21.5135 14.5208 21.0692L6.12551 12.5553L14.5208 4.15996C14.9625 3.71562 15.2104 3.11454 15.2104 2.48801C15.2104 1.86148 14.9625 1.26041 14.5208 0.816066C14.3004 0.593783 14.0381 0.417352 13.7491 0.296952C13.4601 0.176551 13.1501 0.114563 12.837 0.114563C12.5239 0.114563 12.214 0.176551 11.925 0.296952C11.636 0.417352 11.3737 0.593783 11.1532 0.816066L1.09781 10.8715C0.875524 11.0919 0.699094 11.3542 0.578693 11.6432C0.458292 11.9322 0.396304 12.2422 0.396304 12.5553C0.396304 12.8683 0.458292 13.1783 0.578693 13.4673C0.699094 13.7563 0.875524 14.0186 1.09781 14.2391L11.1532 24.4131C11.3737 24.6353 11.636 24.8118 11.925 24.9322C12.214 25.0526 12.5239 25.1146 12.837 25.1146C13.1501 25.1146 13.4601 25.0526 13.7491 24.9322C14.0381 24.8118 14.3004 24.6353 14.5208 24.4131Z"
+                fill="#043C8C" />
+            </svg>
+          </button>
+          <button type="button" class="slider-nav slider-nav-next arrow-right">
+            <svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1.08514 0.816069C0.643434 1.26041 0.395508 1.86148 0.395508 2.48802C0.395508 3.11455 0.643434 3.71562 1.08514 4.15996L9.48045 12.6739L1.08514 21.0692C0.643434 21.5135 0.395508 22.1146 0.395508 22.7411C0.395508 23.3676 0.643434 23.9687 1.08514 24.4131C1.30561 24.6353 1.5679 24.8118 1.8569 24.9322C2.14589 25.0526 2.45587 25.1146 2.76894 25.1146C3.08202 25.1146 3.39199 25.0526 3.68099 24.9322C3.96999 24.8118 4.23228 24.6353 4.45275 24.4131L14.5082 14.3577C14.7304 14.1372 14.9069 13.8749 15.0273 13.5859C15.1477 13.2969 15.2097 12.9869 15.2097 12.6739C15.2097 12.3608 15.1477 12.0508 15.0273 11.7618C14.9069 11.4728 14.7304 11.2105 14.5082 10.99L4.45275 0.816069C4.23228 0.593786 3.96999 0.417357 3.68099 0.296956C3.39199 0.176555 3.08202 0.114564 2.76894 0.114564C2.45587 0.114564 2.14589 0.176555 1.8569 0.296956C1.5679 0.417357 1.30561 0.593786 1.08514 0.816069Z"
+                fill="#043C8C" />
+            </svg>
+          </button>
         </div>
+        <ul class="values__content">
+          <li>
+            <img src="/assets/choferes.svg" alt="Icono de choferes calificados" class="values__carousel--icon">
+            <small class="values__carousel--text">Choferes calificados</small>
+          </li>
+          <li>
+            <img src="/assets//puntualidad.svg" alt="Icono de puntualidad" class="values__carousel--icon">
+            <small class="values__carousel--text">Puntualidad</small>
+          </li>
+          <li>
+            <img src="/assets//seguridad-destino.svg" alt="Icono seguridad a destino" class="values__carousel--icon">
+            <small class="values__carousel--text">Seguridad a destino</small>
+          </li>
+          <li>
+            <img src="/assets/clientes-satisfechos.svg" alt="Icono clientes satisfechos" class="values__carousel--icon">
+            <small class="values__carousel--text">Clientes satisfechos</small>
+          </li>
+        </ul>
       </div>
     </section>
     <div class="wpp-button__container">
@@ -270,7 +311,7 @@
               d="M18.4702 15.9199L17.8123 16.5739C17.8123 16.5739 16.2485 18.1289 11.9802 13.8847C7.71188 9.64062 9.27561 8.08576 9.27561 8.08576L9.68987 7.67382C10.7105 6.65904 10.8067 5.02981 9.91622 3.84041L8.09486 1.40739C6.99278 -0.0647275 4.86321 -0.259193 3.60003 0.996808L1.33283 3.25114C0.706492 3.87392 0.286766 4.68124 0.337668 5.57682C0.467884 7.86801 1.50452 12.7977 7.28901 18.5493C13.4232 24.6487 19.1789 24.891 21.5326 24.6716C22.277 24.6023 22.9244 24.2231 23.4462 23.7043L25.4981 21.6641C26.8832 20.2869 26.4926 17.9258 24.7205 16.9625L21.9609 15.4623C20.7972 14.8298 19.3796 15.0155 18.4702 15.9199Z"
               fill="#043C8C" />
           </svg>
-          <a href="tel:+5491136949011" target="_blank" class="footer__block--cta">+54 9 1136949011</a>
+          <a href="tel:+5491136949011" target="_blank" class="footer__block--cta--phone">+54 9 1136949011</a>
         </div>
         <div class="footer__block">
           <svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -281,7 +322,7 @@
               d="M14.1821 13.9933C13.9964 14.0861 13.8107 14.179 13.625 14.179C13.4393 14.179 13.2536 14.0861 13.0679 13.9933L0.625 5.729V17.8933C0.625 20.4933 2.66786 22.5361 5.26786 22.5361H21.9821C24.5821 22.5361 26.625 20.4933 26.625 17.8933V5.729L14.1821 13.9933Z"
               fill="#043C8C" />
           </svg>
-          <a href="mailto:caminoalaeropuerto1@gmail.com" class="footer__block--cta">caminoalaeropuerto1@gmail.com</a>
+          <a href="mailto:caminoalaeropuerto1@gmail.com" class="footer__block--cta--email">caminoalaeropuerto1@gmail.com</a>
         </div>
       </div>
       <form action="" class="footer__form">
@@ -306,7 +347,6 @@
       </form>
     </div>
   </footer>
-  <script src="./main.js"></script>
 </body>
 
 </html>
