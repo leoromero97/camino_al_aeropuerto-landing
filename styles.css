@@ -184,7 +184,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 60rem;
-  background-image: url(/assets/img-banner.jpg), linear-gradient(140deg, #1d1c1b 0%, #0e0e0eec 100%);
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/repartear-admin.appspot.com/o/img-banner_camino_al_aeropuerto.jpg?alt=media&token=c0016f91-ee55-4396-b488-25c1c6fcbff7), linear-gradient(140deg, #1d1c1b 0%, #0e0e0eec 100%);
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
