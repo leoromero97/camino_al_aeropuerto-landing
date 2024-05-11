@@ -6,6 +6,7 @@
   /* 10px = 1rem */
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -129,6 +130,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.header__cta--icon {
+  display: none;
+}
+
 .header__container-logo {
   width: 100%;
   background-color: #043B8A;
@@ -144,6 +149,34 @@ body {
   margin-bottom: -3rem;
 }
 
+@media (min-width: 1024px) {
+  .header {
+    position: relative;
+  }
+
+  .header__cta {
+    background-color: #043B8A;
+    position: absolute;
+    right: 2rem;
+    top: 40%;
+    width: fit-content;
+    gap: 1.5rem;
+  }
+
+  .header__cta--icon {
+    display: flex;
+  }
+
+  .header__container-logo {
+    min-height: 8rem;
+  }
+
+  .header__img {
+    width: 35.1rem;
+    margin-bottom: -2rem;
+  }
+}
+
 /* Hero section */
 .hero {
   display: flex;
@@ -154,6 +187,7 @@ body {
   background-image: url(/assets/img-banner.jpg), linear-gradient(140deg, #1d1c1b 0%, #0e0e0eec 100%);
   background-repeat: no-repeat;
   background-position: top;
+  background-size: cover;
 }
 
 .hero__container {
@@ -209,6 +243,43 @@ body {
   padding: 1.2rem 2.4rem;
   width: fit-content;
   border-radius: 0.6rem;
+  transition: cubic-bezier();
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    min-height: 90rem;
+  }
+
+  .hero__title,
+  .hero__title--strong {
+    font-size: 6.4rem;
+    max-width: 80rem;
+    line-height: 5.6rem;
+    letter-spacing: 4.8px;
+  }
+
+  .hero__text {
+    font-size: 2.5rem;
+    line-height: 3.1rem;
+    letter-spacing: 0.3px;
+    max-width: 79rem;
+  }
+
+  .hero__cta,
+  .pricing__card--footer-cta,
+  .payment-methods__cta,
+  .footer__form--button {
+    font-size: 2.1rem;
+    font-family: "Fira Sans", Sans-serif;
+  }
+
+  .hero__cta:hover,
+.pricing__card--footer-cta:hover,
+.payment-methods__cta:hover,
+.footer__form--button:hover {
+  background-color: #239cc8;
+}
 }
 
 /* Pricing section */
@@ -239,6 +310,8 @@ body {
   text-align: center;
   text-transform: uppercase;
   line-height: 1.3;
+  background-image: url(/assets//img-bg_values.png);
+  background-repeat: no-repeat;
 }
 
 .pricing__cards-container {
@@ -319,6 +392,33 @@ body {
   font-family: "Fira Sans", sans-serif;
 }
 
+@media (min-width: 1024px) {
+  .pricing__title {
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 2.8px;
+    padding: 4rem 8rem 0;
+  }
+
+  .pricing__cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pricing__card {
+    align-self: flex-start;
+    min-height: 38rem;
+  }
+
+  .pricing__card--footer-description {
+    font-size: 2.3rem;
+  }
+
+  .pricing__card--footer-price {
+    font-size: 4rem;
+  }
+}
+
 /* Payment methods section */
 
 .payment-methods {
@@ -381,6 +481,17 @@ body {
   width: 100%;
 }
 
+@media (min-width: 1024px) {
+  .payment-methods__container {
+    flex-direction: row;
+  }
+
+  .payment-methods__block-one {
+    border-width: 0 0.3rem 0 0;
+    padding: 4rem 2rem 4rem 0;
+  }
+}
+
 /* Navy */
 .navy {
   display: flex;
@@ -423,6 +534,31 @@ body {
 .slider-nav::after {
   display: none;
 }
+
+.navy__content {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .navy__title {
+    font-size: 5rem;
+    letter-spacing: 2.8px;
+    padding: 2rem 8rem;
+  }
+
+  .swiffy-slider {
+    display: none;
+  }
+
+  .navy__content {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
 /* Values */
 
 .values {
@@ -487,12 +623,41 @@ body {
   right: 10%;
 }
 
+.values__content {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .values__title {
+    font-size: 5rem;
+    letter-spacing: 2.8px;
+    padding: 2rem 8rem;
+  }
+
+  .values__content {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .values__content li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+}
+
 /* Wpp button */
 
 .wpp-button__container {
   position: fixed;
   bottom: 4rem;
   right: 1.5rem;
+  z-index: 2;
 }
 
 .wpp-button__cta {
@@ -505,6 +670,11 @@ body {
   justify-content: center;
   color: #FFFFFF;
   box-sizing: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transition: cubic-bezier();
+}
+
+.wpp-button__cta:hover {
+  box-shadow: 2px 2px 11px rgba(0,0,0,0.7);
 }
 
 /* Footer */
@@ -567,13 +737,14 @@ body {
   margin-bottom: 2rem;
 }
 
-.footer__block--cta {
+.footer__block--cta--phone,
+.footer__block--cta--email {
   color: #043C8C;
   font-size: 2rem;
   font-weight: 500;
 }
 
-.footer__block--cta:last-child {
+.footer__block--cta--email {
   font-size: 1.6rem;
 }
 
@@ -584,6 +755,7 @@ body {
   align-items: center;
   padding: 2rem;
   background-color: #EFEFEF;
+  max-width: 60rem;
 }
 
 .footer__form--inputs {
@@ -604,7 +776,7 @@ body {
 }
 
 .footer__form--input,
-.footer__form--textarea  {
+.footer__form--textarea {
   font-family: "Roboto", Sans-serif;
   background-color: #FFFFFF;
   display: flex;
@@ -635,4 +807,56 @@ body {
   font-size: 2.3rem;
   font-weight: 600;
   letter-spacing: 1.2px;
+}
+
+@media (min-width: 1024px) {
+  .footer__container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .footer__main-block {
+    gap: 4rem;
+    align-items: flex-start;
+  }
+
+  .footer__title {
+    font-size: 5rem;
+    letter-spacing: 2.6px;
+  }
+
+  .footer__divider {
+    display: none;
+  }
+
+  .footer__block {
+    background-color: #EFEFEF;
+    padding: 4rem;
+    max-width: 39rem;
+    box-shadow: 15px 15px 0px 0px #C2E2FB;
+    gap: 2rem;
+  }
+
+  .footer__block svg {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  .footer__block--cta--phone {
+    font-size: 3rem;
+  }
+
+  .footer__block--cta--email {
+    font-size: 2.3rem;
+  }
+
+  .footer__form--input,
+  .footer__form--textarea {
+    font-size: 2.2rem;
+  }
+
+  .footer__form--input::placeholder,
+  .footer__form--textarea::placeholder {
+    font-size: 2rem;
+  }
 }
