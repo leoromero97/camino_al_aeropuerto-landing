@@ -184,7 +184,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 60rem;
-  background-image: url(https://firebasestorage.googleapis.com/v0/b/repartear-admin.appspot.com/o/img-banner_camino_al_aeropuerto.jpg?alt=media&token=c0016f91-ee55-4396-b488-25c1c6fcbff7), linear-gradient(140deg, #1d1c1b 0%, #0e0e0eec 100%);
+  background-image: url(/assets/img-banner_camino_al_aeropuerto.jpg), linear-gradient(140deg, #1d1c1b 0%, #0e0e0eec 100%);
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -275,11 +275,11 @@ body {
   }
 
   .hero__cta:hover,
-.pricing__card--footer-cta:hover,
-.payment-methods__cta:hover,
-.footer__form--button:hover {
-  background-color: #239cc8;
-}
+  .pricing__card--footer-cta:hover,
+  .payment-methods__cta:hover,
+  .footer__form--button:hover {
+    background-color: #239cc8;
+  }
 }
 
 /* Pricing section */
@@ -354,6 +354,8 @@ body {
   padding: 5rem 1rem 1rem 1rem;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+  flex-grow: 2;
+  max-height: 15rem;
 }
 
 .pricing__card--footer {
@@ -367,7 +369,7 @@ body {
   flex-grow: 1;
   justify-content: center;
   gap: 2rem;
-  padding-top: 1.5rem;
+  padding: 1.5rem 1rem;
 }
 
 .pricing__card--footer-description {
@@ -402,16 +404,20 @@ body {
 
   .pricing__cards-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 
   .pricing__card {
     align-self: flex-start;
-    min-height: 38rem;
+    min-height: 52rem;
+  }
+
+  .pricing__card--footer {
+    gap: 2.6rem;
   }
 
   .pricing__card--footer-description {
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
 
   .pricing__card--footer-price {
@@ -490,6 +496,10 @@ body {
     border-width: 0 0.3rem 0 0;
     padding: 4rem 2rem 4rem 0;
   }
+
+  .payment-methods__cta:hover {
+    background-color: #03548d;
+  }
 }
 
 /* Navy */
@@ -556,6 +566,15 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+  }
+
+  .navy__content li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 30rem;
   }
 }
 
@@ -648,7 +667,6 @@ body {
     flex-direction: column;
     gap: 2rem;
   }
-
 }
 
 /* Wpp button */
@@ -674,7 +692,7 @@ body {
 }
 
 .wpp-button__cta:hover {
-  box-shadow: 2px 2px 11px rgba(0,0,0,0.7);
+  box-shadow: 2px 2px 11px rgba(0, 0, 0, 0.7);
 }
 
 /* Footer */
