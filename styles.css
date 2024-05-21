@@ -118,16 +118,17 @@ body {
 }
 
 .header__cta {
-  background-color: #42BCE9;
+  background: linear-gradient(#042656, #043B8A);
   width: 100%;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 600;
   color: #FFFFFF;
   font-family: "Roboto", sans-serif;
+  min-height: 6rem;
 }
 
 .header__cta--icon {
@@ -216,7 +217,7 @@ body {
 
 .hero__text {
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.7em;
   letter-spacing: 1.2px;
   color: #FFFFFF;
@@ -226,9 +227,8 @@ body {
 
 .hero__cta,
 .pricing__card--footer-cta,
-.payment-methods__cta,
-.footer__form--button {
-  background-color: #42BCE9;
+.payment-methods__cta {
+  background-color: #042656;
   text-align: center;
   display: flex;
   align-items: center;
@@ -268,17 +268,15 @@ body {
 
   .hero__cta,
   .pricing__card--footer-cta,
-  .payment-methods__cta,
-  .footer__form--button {
+  .payment-methods__cta {
     font-size: 2.1rem;
     font-family: "Fira Sans", Sans-serif;
   }
 
   .hero__cta:hover,
   .pricing__card--footer-cta:hover,
-  .payment-methods__cta:hover,
-  .footer__form--button:hover {
-    background-color: #239cc8;
+  .payment-methods__cta:hover {
+    background-color: #082c5f;
   }
 }
 
@@ -561,10 +559,10 @@ body {
   }
 
   .navy__content {
-    display: flex;
+    display: grid;
     gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
     width: 100%;
   }
 
@@ -676,6 +674,26 @@ body {
   bottom: 4rem;
   right: 1.5rem;
   z-index: 2;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.wpp-button__message {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: auto;
+  background-color: #EFEFEF;
+  border-radius: 0.8rem;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1.5px solid #020202;
+}
+
+.wpp-button__message:hover {
+  background-color: #E2EBF1;
 }
 
 .wpp-button__cta {
@@ -693,6 +711,23 @@ body {
 
 .wpp-button__cta:hover {
   box-shadow: 2px 2px 11px rgba(0, 0, 0, 0.7);
+}
+
+@media (min-width: 1024px) {
+  .wpp-button__message {
+    padding: 2rem 4rem;
+    font-size: 2.4rem;
+    border-width: 2px;
+  }
+  .wpp-button__cta {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .wpp-button__icon {
+    height: 4rem;
+    width: 4rem;
+  }
 }
 
 /* Footer */
@@ -715,7 +750,7 @@ body {
   align-items: center;
   width: 100%;
   max-width: 144rem;
-  padding-top: 3rem;
+  padding: 4rem 0;
 }
 
 .footer__main-block {
@@ -755,76 +790,10 @@ body {
   margin-bottom: 2rem;
 }
 
-.footer__block--cta--phone,
-.footer__block--cta--email {
+.footer__block--cta--phone {
   color: #043C8C;
   font-size: 2rem;
   font-weight: 500;
-}
-
-.footer__block--cta--email {
-  font-size: 1.6rem;
-}
-
-.footer__form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  padding: 2rem;
-  background-color: #EFEFEF;
-  max-width: 60rem;
-}
-
-.footer__form--inputs {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 2.7rem;
-  width: 100%;
-}
-
-.footer__form--field {
-  width: 100%;
-  display: flex;
-}
-
-.footer__form--label {
-  display: none;
-}
-
-.footer__form--input,
-.footer__form--textarea {
-  font-family: "Roboto", Sans-serif;
-  background-color: #FFFFFF;
-  display: flex;
-  width: 100%;
-  padding: 2rem;
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #1D1D1D;
-  padding: 0.8rem 2.4rem;
-  min-height: 7.2rem;
-}
-
-.footer__form--input::placeholder,
-.footer__form--textarea::placeholder {
-  color: #636363;
-  font-weight: 300;
-  font-size: 1.6rem;
-}
-
-.footer__form--textarea {
-  min-height: 10rem;
-}
-
-.footer__form--button {
-  padding: 2.5rem 5rem;
-  width: 100%;
-  font-family: "Roboto", Sans-serif;
-  font-size: 2.3rem;
-  font-weight: 600;
-  letter-spacing: 1.2px;
 }
 
 @media (min-width: 1024px) {
@@ -835,7 +804,6 @@ body {
 
   .footer__main-block {
     gap: 4rem;
-    align-items: flex-start;
   }
 
   .footer__title {
@@ -862,19 +830,5 @@ body {
 
   .footer__block--cta--phone {
     font-size: 3rem;
-  }
-
-  .footer__block--cta--email {
-    font-size: 2.3rem;
-  }
-
-  .footer__form--input,
-  .footer__form--textarea {
-    font-size: 2.2rem;
-  }
-
-  .footer__form--input::placeholder,
-  .footer__form--textarea::placeholder {
-    font-size: 2rem;
   }
 }
